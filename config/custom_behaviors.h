@@ -1,5 +1,3 @@
-
-
 // autopair macros
 ZMK_BEHAVIOR(mbkt, macro,
     bindings = <&macro_tap &kp LBKT &kp RBKT &kp LEFT>;
@@ -29,13 +27,6 @@ ZMK_BEHAVIOR(mtabprev, macro,
     bindings =
         <&macro_tap &kp G &kp LS(T)>;
 )
-
-// tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
-//ZMK_BEHAVIOR(smart_shft, mod_morph,
-//    bindings = <&sk LSHFT>, <&caps_word>;
-//    mods = <(MOD_LSFT)>;
-//)
-
 
 // Command+Tab swapper, requires PR #1366
 ZMK_BEHAVIOR(swapper, tri_state,
@@ -140,18 +131,6 @@ ZMK_BEHAVIOR(comma_dance, tap_dance,
 #define SPC_MVR   &kp LC(LA(LG(RIGHT)))  // Move right one screen
 #define SPC_MVL   &kp LC(LA(LG(LEFT)))   // Move left one screen
 #define SPC_UNDO  &kp LC(LA(LG(Z)))      // Undo last spectacle action
-
-// Mouse Layer command shortcuts
-// All keys become tap: command + (key) and long tap: shift + command + (key)
-#define Q_F &mt LS(LG(F)) LG(F)
-#define Q_P &mt LS(LG(P)) LG(P)
-#define Q_B &mt LS(LG(B)) LG(B)
-#define Q_G &mt LS(LG(G)) LG(G)
-#define Q_Z &mt LS(LG(Z)) LG(Z)
-#define Q_X &mt LS(LG(X)) LG(X)
-#define Q_C &mt LS(LG(C)) LG(C)
-#define Q_D &mt LS(LG(D)) LG(D)
-#define Q_V &mt LS(LG(V)) LG(V)
 
 #define LOCK_SCRN   &kp LC(LG(Q))
 #define CANCEL      &kp K_CANCEL        // cancel caps-word, num-word and smart-mouse
