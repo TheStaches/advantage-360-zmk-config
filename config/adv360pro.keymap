@@ -4,7 +4,6 @@
 #define ___ &trans
 
 /* Layer references  */
-
 #define COLEMAK 0
 #define QWERTY 1
 #define NUM 2
@@ -15,15 +14,12 @@
 #define NAV 7
 
 /* Global settings */
-
 #include "general.h"
 
 /* Home row mods */
-
 #include "homerow_mods.h"
 
 /* Macros and shortcuts */
-
 #include "custom_behaviors.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/backlight.h>
@@ -33,28 +29,6 @@
 
 / {
     behaviors {
-        #include "macros.dtsi"
-      #include "version.dtsi"
-      #ifndef VERSION_MACRO
-
-        macro_ver: macro_ver {
-            compatible = "zmk,behavior-macro";
-            label = "macro_version";
-            #binding-cells = <0>;
-            bindings = <&kp RET>;
-        };
-
-        #endif
-
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <175>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
     };
 
     macros {
@@ -98,7 +72,7 @@
 &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                                        &trans                  &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none         &none         &none         &bootloader                                                                  &bootloader             &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none         &none         &none         &none               &none  &none    &bt BT_CLR  &none                        &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &macro_ver    &none                                    &none    &none                                                            &none  &none       &none       &none  &none  &none
+&none  &none         &none         &none         &none    &none                                    &none    &none                                                            &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none         &none                                    &none  &none  &none    &none       &bl BL_TOG  &rgb_ug RGB_TOG                                 &bl BL_INC  &bl BL_DEC  &none  &none  &none
             >;
         };
